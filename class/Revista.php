@@ -16,4 +16,12 @@ class Revista extends Publicacion{
     public function setTematica($tematica){
         $this->tematica = $tematica;
     }
+
+    public function getColor(){
+        return $this->color;
+    }
+
+    public function getTematica(){
+        return $this->tematica;
+    }
 }

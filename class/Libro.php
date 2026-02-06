@@ -16,4 +16,12 @@ class Libro extends Publicacion{
     public function setPaginas($paginas){
         $this->paginas = $paginas;
     }
+
+    public function getEditorial(){
+        return $this->editorial;
+    }
+
+    public function getPaginas(){
+        return $this->paginas;
+    }
 }
