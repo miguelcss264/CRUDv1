@@ -54,6 +54,8 @@ class GestorSesion implements iGestor {
                     $entidad->getNivelEstabilidad(),
                     $entidad->getAntiguedad()
                 );
+            default:
+                throw new InvalidArgumentException("Tipo de entidad no válido: {$tipo}");
         }
     }
 
