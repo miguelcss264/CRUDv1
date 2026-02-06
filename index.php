@@ -2,8 +2,8 @@
 require_once "autoload.php";
 session_start();
 
-$miGestor=new GestorPublicacion();
-$controller = new PublicacionController($miGestor);
+$gestor = new GestorSesion();
+$controller = new EntidadController($gestor);
 
 $accion = $_GET['accion'] ?? 'index';
 
@@ -11,11 +11,14 @@ switch ($accion) {
     case 'crear':
         $controller->crear();
         break;
-    case 'editarLibro':
-        $controller->editarLibro();
+    case 'guardar':
+        $controller->guardar();
         break;
-    case 'editarRevista':
-        $controller->editarRevista();
+    case 'editar':
+        $controller->editar();
+        break;
+    case 'actualizar':
+        $controller->actualizar();
         break;
     case 'eliminar':
         $controller->eliminar();
